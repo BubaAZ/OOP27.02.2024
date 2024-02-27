@@ -20,7 +20,9 @@
 **Материалы, которые пригодятся для выполнения задания**
 
 [Как создать Maven-проект в IDEA?](https://github.com/netology-code/javaqa-homeworks-video/blob/javaqa-55/QA_Maven_Idea_Create.md)
+
 [Как отформатировать код в Java?](https://github.com/netology-code/javaqa-homeworks-video/blob/javaqa-55/QA_Java_Idea_Format.md)
+
 [Как настроить CI на основе GitHub Actions?](https://github.com/netology-code/javaqa-homeworks-video/blob/javaqa-55/QA_CI.md)
 
 **Задание 1 — обязательное**
