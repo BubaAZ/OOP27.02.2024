@@ -63,8 +63,7 @@ public class Radio {
     public void prevRadioStation() {
         if (currentRadioStation > 0) {
             setCurrentRadioStation(currentRadioStation - 1);
-        } else {
-            setToMaxRadioStation();
+
         }
     }
 
