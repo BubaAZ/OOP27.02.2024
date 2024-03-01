@@ -67,11 +67,7 @@ public class Radio {
         }
     }
 
-    public void augmentVolume() {
-        if (currentVolume < 100) {
-            setCurrentVolume(currentVolume + 1);
-        } else {
-            setToMaxVolume();
+    public
         }
     }
 
