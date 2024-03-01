@@ -3,9 +3,21 @@ package ru.netology.radio;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-
 public class RadioTest {
     Radio radio = new Radio();
+
+    //Номер текущей радиостанции
+
+    @Test
+    public void shouldCalcMaxRadioStation() {
+        Radio rad = new Radio(10);
+        rad.setToMaxRadioStation();
+
+        int expected = 9;
+        int actual = rad.getMaxRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
     public void shouldSetRadioStation() {
@@ -13,6 +25,16 @@ public class RadioTest {
 
         int expected = 5;
         int actual = radio.getCurrentRadioStation();
+
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldSetToMaxRadioStation() {
+        radio.setToMaxRadioStation();
+
+        int expected = 9;
+        int actual = radio.getMaxRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -38,21 +60,11 @@ public class RadioTest {
     }
 
     @Test
-    public void shouldSetToMaxRadioStation() {
-        radio.setToMaxRadioStation();
-
-        int expected = 9;
-        int actual = radio.getCurrentRadioStation();
-
-        Assertions.assertEquals(expected, actual);
-    }
-
-    @Test
     public void shouldSetToMinRadioStation() {
         radio.setToMinRadioStation();
 
         int expected = 0;
-        int actual = radio.getCurrentRadioStation();
+        int actual = radio.getMinRadioStation();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -87,7 +99,6 @@ public class RadioTest {
         int expected = 9;
         int actual = radio.getCurrentRadioStation();
 
-
         Assertions.assertEquals(expected, actual);
     }
 
@@ -101,7 +112,8 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
-    // Громкость звука
+
+    //Громкость звука
 
     @Test
     public void shouldSetVolume() {
@@ -115,7 +127,7 @@ public class RadioTest {
 
     @Test
     public void shouldNotSetVolumeFirst() {
-        radio.setCurrentVolume(108);
+        radio.setCurrentVolume(107);
 
         int expected = 0;
         int actual = radio.getCurrentVolume();
@@ -125,7 +137,7 @@ public class RadioTest {
 
     @Test
     public void shouldNotSetVolumeSecond() {
-        radio.setCurrentVolume(-50);
+        radio.setCurrentVolume(-10);
 
         int expected = 0;
         int actual = radio.getCurrentVolume();
@@ -138,10 +150,9 @@ public class RadioTest {
         radio.setToMaxVolume();
 
         int expected = 100;
-        int actual = radio.getCurrentVolume();
+        int actual = radio.getMaxVolume();
 
         Assertions.assertEquals(expected, actual);
-
     }
 
     @Test
@@ -149,7 +160,7 @@ public class RadioTest {
         radio.setToMinVolume();
 
         int expected = 0;
-        int actual = radio.getCurrentVolume();
+        int actual = radio.getMinVolume();
 
         Assertions.assertEquals(expected, actual);
     }
@@ -163,7 +174,6 @@ public class RadioTest {
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
-
     }
 
     @Test
@@ -186,7 +196,6 @@ public class RadioTest {
         int actual = radio.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
-
     }
 
     @Test
